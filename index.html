@@ -6,7 +6,7 @@
     <title>バカラ戦略アドバイザー</title>
     
     <!-- PWA設定 -->
-    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoi44OQ44Kr44Op5oim55Wl44Ki44OJ44OQ44Kk44K244O8Iiwic2hvcnRfbmFtZSI6IkJhY2NhcmF0QWR2aXNvciIsImRlc2NyaXB0aW9uIjoi44OQ44Kr44Op44Gu5oim55Wl44KS44K144Od44O844OI44GZ44KL5aSa6KiA6Kqe44Ki44OJ44OQ44Kk44K244O8IiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1USTRJaUJvWldsbmFIUTlJakV5T0NJZ2RtbGxkMEp2ZUQwaU1DQXdJREV5T0NBeE1qZ2lJR1pwYkd3OUlpTmhObUU0TWpjaUlIaHRiRzV6UFNKb2RIUndjem92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaVBnb2dJQ0E4Y0dGMGFDQmtQU0p0TmpRZ05qUkROalFnTWpjdU5UWWdNamN1TlRZZ05qUWdOalFnTmpSRE1UQXdMalEwSURZMElERXlPQ0EyTkVNNU5TNDBOQ0F5Tnk0MU5pQTVOaUF5Tnk0MU5pQTVOaUE1TmtNNU5pQXhNREF1TkRRZ05qUWdNVEE0SURZMElERXlPRU0yTkNFeE1EZ3VORFFnTWpjdU5UWWdNVEF3TGpRMElESTNMalUySURZMElERTJJRFkwSWo0OEwzTjJaejQ9IiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJzaXplcyI6IjEyOHgxMjgifV0sInN0YXJ0X3VybCI6Ii8iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsInRoZW1lX2NvbG9yIjoiIzFiMmMzZSIsImJhY2tncm91bmRfY29sb3IiOiIjMGY0NzJhIn0=">
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoi44OQ44Kr44Op5oim55Wl44Ki44OJ44OQ44Kk44K244O8Iiwic2hvcnRfbmFtZSI6IkJhY2NhcmF0QWR2aXNvciIsImRlc2NyaXB0aW9uIjoi44OQ44Kr44Op44Gu5oim55Wl44KS44K144Od44O844OI44GZ44KL5aSa6KiA6Kqe44Ki44OJ44OQ44Kk44K244O8IiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1USTRJaUJvWldsbmFIUTlJakV5T0NJZ2RtbGxkMEp2ZUQwaU1DQXdJREV5T0NBeE1qZ2lJR1pwYkd3OUlpTmhObUU0TWpjaUlIaHRiRzV6UFNKb2RIUndjem92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaVBnb2dJQ0E4Y0dGMGFDQmtQU0p0TmpRZ05qUkROalFnTWpjdU5UWWdNamN1TlRZZ05qUWdOalJETVRBd0xqUTBJRFkwSURFeU9DQTJORE01TlM0ME5DQXlOeTQxTmlBNU5pQXlOeTQxTmlBNU5pQTVOa001TmlBeE1EQXVORFFnTmpRZ01UQTRJRFkwSURFeU9VTTJOQ0V4TURndU5EUWdNamN1TlRZZ01UQXdMalEwSURJM0xqVTJJRFkwSURFMklEWTBJajQ4TDNOMlp6ND0iLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCIsInNpemVzIjoiMTI4eDEyOCJ9XSwic3RhcnRfdXJsIjoiLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwidGhlbWVfY29sb3IiOiIjMWIyYzNlIiwiYmFja2dyb3VuZF9jb2xvciI6IiMwZjQ3MmEifQ==">
     <meta name="theme-color" content="#1b2c3e">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,9 +22,25 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0f1419;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
             color: white;
             min-height: 100vh;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 200, 255, 0.2) 0%, transparent 50%);
+            z-index: -1;
         }
         
         .container {
@@ -34,12 +50,15 @@
         }
         
         .header {
-            background: #1b2532;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 20px;
-            border-bottom: 1px solid #334155;
+            border-radius: 0 0 20px 20px;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
         }
         
         .header-content {
@@ -51,24 +70,51 @@
         }
         
         .title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #3b82f6;
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 4s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
         
         .funds-display {
-            background: #374151;
-            padding: 10px 15px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px 20px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .funds-display:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
         }
         
         .funds-amount {
-            font-weight: bold;
+            font-weight: 800;
             color: #10b981;
-            font-size: 18px;
+            font-size: 20px;
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { text-shadow: 0 0 20px rgba(16, 185, 129, 0.6); }
+            50% { text-shadow: 0 0 25px rgba(16, 185, 129, 0.8); }
         }
         
         .main-content {
@@ -85,10 +131,38 @@
         }
         
         .card {
-            background: #1b2532;
-            border: 1px solid #374151;
-            border-radius: 12px;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ff6b6b);
+            background-size: 200% 100%;
+            animation: borderFlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes borderFlow {
+            0%, 100% { background-position: 0% 0%; }
+            50% { background-position: 200% 0%; }
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.2);
         }
         
         .card-title {
@@ -113,18 +187,21 @@
         
         .input-field, .select-field {
             width: 100%;
-            background: #374151;
-            border: 1px solid #4b5563;
-            border-radius: 6px;
-            padding: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 14px;
             color: white;
             font-size: 16px;
+            transition: all 0.3s ease;
         }
         
         .input-field:focus, .select-field:focus {
             outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+            border-color: rgba(79, 172, 254, 0.6);
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15), 0 0 20px rgba(79, 172, 254, 0.3);
+            transform: scale(1.02);
         }
         
         .input-row {
@@ -134,11 +211,11 @@
         }
         
         .button {
-            background: #3b82f6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
+            padding: 15px 25px;
+            border-radius: 15px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
@@ -146,35 +223,66 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            transition: background-color 0.2s;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .button:hover::before {
+            left: 100%;
         }
         
         .button:hover {
-            background: #2563eb;
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        
+        .button:active {
+            transform: translateY(0);
         }
         
         .button.success {
-            background: #10b981;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
         }
         
         .button.success:hover {
-            background: #059669;
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
         }
         
         .button.danger {
-            background: #ef4444;
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
         }
         
         .button.danger:hover {
-            background: #dc2626;
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            box-shadow: 0 8px 25px rgba(239, 68, 68, 0.6);
         }
         
         .result-display {
-            background: #374151;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            padding: 18px;
+            border-radius: 15px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         
         .result-row {
@@ -193,16 +301,43 @@
         .winner-tie { color: #10b981; }
         
         .suggestion-box {
-            background: #374151;
-            padding: 20px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 18px;
             text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .suggestion-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%); }
+            100% { transform: translateX(100%) translateY(100%); }
         }
         
         .suggestion-text {
-            font-size: 18px;
-            font-weight: bold;
-            color: #10b981;
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+            position: relative;
+            z-index: 1;
         }
         
         .status-item {
@@ -214,49 +349,68 @@
         }
         
         .status-badge {
-            padding: 4px 8px;
-            border-radius: 12px;
+            padding: 8px 15px;
+            border-radius: 20px;
             font-size: 12px;
-            font-weight: 500;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .status-verified {
-            background: #065f46;
-            color: #10b981;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+            color: #34d399;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
         }
         
         .status-verifying {
-            background: #92400e;
-            color: #f59e0b;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.2));
+            color: #fbbf24;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
         }
         
         .status-active {
-            background: #7f1d1d;
-            color: #ef4444;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.2));
+            color: #f87171;
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
         }
         
         .status-inactive {
-            background: #374151;
+            background: linear-gradient(135deg, rgba(107, 114, 128, 0.2), rgba(75, 85, 99, 0.2));
             color: #9ca3af;
+            box-shadow: 0 0 10px rgba(107, 114, 128, 0.2);
         }
         
         .history-container {
-            background: #0f1419;
-            border-radius: 8px;
-            padding: 15px;
+            background: rgba(15, 20, 25, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 18px;
             height: 300px;
             overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
         
         .history-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            margin-bottom: 5px;
-            background: #1b2532;
-            border-radius: 6px;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
             font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .history-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+            border-color: rgba(255, 255, 255, 0.15);
         }
         
         .history-empty {
@@ -267,12 +421,23 @@
         
         .chart-container {
             height: 300px;
-            background: #374151;
-            border-radius: 8px;
+            background: rgba(15, 20, 25, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #6b7280;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .chart-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 18px;
         }
         
         .settings-modal {
@@ -281,21 +446,42 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 1000;
             padding: 20px;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         .settings-content {
-            background: #1b2532;
-            border: 1px solid #374151;
-            border-radius: 12px;
-            padding: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px;
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
         
         .settings-buttons {
@@ -314,29 +500,41 @@
         }
         
         .current-lang {
-            background: #374151;
-            padding: 8px 12px;
-            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 10px 15px;
+            border-radius: 12px;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             font-size: 14px;
-            color: #3b82f6;
+            color: #4facfe;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .current-lang:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: scale(1.05);
         }
         
         .settings-button {
-            background: #374151;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 10px 15px;
+            border-radius: 12px;
             color: #9ca3af;
             cursor: pointer;
-            margin-left: 10px;
+            margin-left: 15px;
+            transition: all 0.3s ease;
         }
         
         .settings-button:hover {
-            background: #4b5563;
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            transform: scale(1.1) rotate(90deg);
         }
         
         @media (max-width: 768px) {
@@ -508,10 +706,6 @@
 
                     <div id="resultDisplay" class="result-display hidden">
                         <div class="result-row">
-                            <span id="winnerLabel">勝者:</span>
-                            <span id="winnerValue"></span>
-                        </div>
-                        <div class="result-row">
                             <span id="scoreDiffLabel">スコア差:</span>
                             <span id="scoreDiffValue"></span>
                         </div>
@@ -598,11 +792,12 @@
 
             <!-- Right Panel -->
             <div>
-                <!-- Chart Placeholder -->
+                <!-- Chart -->
                 <div class="card">
                     <h3 class="card-title" id="fundsProgressTitle">📈 資金推移</h3>
                     <div class="chart-container" id="chartContainer">
-                        <span id="chartPlaceholder">チャートはここに表示されます</span>
+                        <canvas id="fundsChart" class="chart-canvas"></canvas>
+                        <span id="chartPlaceholder" style="position: absolute;">チャートはここに表示されます</span>
                     </div>
                 </div>
 
@@ -759,6 +954,33 @@
         let consecutiveTies = 0;
         let lastNonTieRound = null;
         let requiredVerifications = 4;
+        let activeBet = null; // 現在のベット提案を保存
+
+        // Format currency with appropriate scale
+        function formatCurrency(amount) {
+            if (amount >= 1000000) {
+                return '¥' + (amount / 1000000).toFixed(1) + 'M';
+            } else if (amount >= 1000) {
+                return '¥' + (amount / 1000).toFixed(0) + 'k';
+            } else {
+                return '¥' + amount.toLocaleString();
+            }
+        }
+
+        // Format currency for chart labels (more detailed)
+        function formatChartCurrency(amount) {
+            if (amount >= 10000000) {
+                return (amount / 1000000).toFixed(1) + 'M';
+            } else if (amount >= 1000000) {
+                return (amount / 1000000).toFixed(2) + 'M';
+            } else if (amount >= 100000) {
+                return (amount / 1000).toFixed(0) + 'k';
+            } else if (amount >= 10000) {
+                return (amount / 1000).toFixed(1) + 'k';
+            } else {
+                return amount.toLocaleString();
+            }
+        }
 
         // Get current translation
         function t(key) {
@@ -814,6 +1036,7 @@
             updateMartingaleStatus();
             updateTieStatus();
             updateHistoryDisplay();
+            updateChart();
         }
 
         // Get suggestion text
@@ -890,7 +1113,186 @@
             }
         }
 
-        // Update history display
+        // Update chart with improved formatting
+        function updateChart() {
+            const canvas = document.getElementById('fundsChart');
+            const placeholder = document.getElementById('chartPlaceholder');
+            
+            if (bankrollHistory.length <= 1) {
+                placeholder.style.display = 'block';
+                canvas.style.display = 'none';
+                return;
+            }
+            
+            placeholder.style.display = 'none';
+            canvas.style.display = 'block';
+            
+            const ctx = canvas.getContext('2d');
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * window.devicePixelRatio;
+            canvas.height = rect.height * window.devicePixelRatio;
+            canvas.style.width = rect.width + 'px';
+            canvas.style.height = rect.height + 'px';
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+            
+            const padding = 60; // より大きなパディングでラベル用スペースを確保
+            const chartWidth = rect.width - 2 * padding;
+            const chartHeight = rect.height - 2 * padding;
+            
+            // データの範囲を計算
+            const amounts = bankrollHistory.map(h => h.amount);
+            const minAmount = Math.min(...amounts);
+            const maxAmount = Math.max(...amounts);
+            const amountRange = Math.max(maxAmount - minAmount, maxAmount * 0.1); // 最小でも10%の範囲を確保
+            
+            // より適切な範囲設定
+            const adjustedMin = minAmount - amountRange * 0.1;
+            const adjustedMax = maxAmount + amountRange * 0.1;
+            const adjustedRange = adjustedMax - adjustedMin;
+            
+            // 背景をクリア
+            ctx.fillStyle = 'rgba(55, 65, 81, 0.8)';
+            ctx.fillRect(0, 0, rect.width, rect.height);
+            
+            // グリッドライン
+            ctx.strokeStyle = '#4b5563';
+            ctx.lineWidth = 1;
+            
+            // 水平線とY軸ラベル
+            const ySteps = 6;
+            for (let i = 0; i <= ySteps; i++) {
+                const y = padding + (chartHeight * i / ySteps);
+                ctx.beginPath();
+                ctx.moveTo(padding, y);
+                ctx.lineTo(padding + chartWidth, y);
+                ctx.stroke();
+                
+                // Y軸ラベル - 改善された金額フォーマット
+                const value = adjustedMax - (adjustedRange * i / ySteps);
+                ctx.fillStyle = '#9ca3af';
+                ctx.font = '11px sans-serif';
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'middle';
+                
+                // より読みやすい金額表示
+                let labelText;
+                if (value >= 1000000) {
+                    labelText = (value / 1000000).toFixed(value >= 10000000 ? 0 : 1) + 'M';
+                } else if (value >= 10000) {
+                    labelText = (value / 1000).toFixed(value >= 100000 ? 0 : 0) + 'k';
+                } else {
+                    labelText = Math.round(value).toLocaleString();
+                }
+                
+                ctx.fillText('¥' + labelText, padding - 8, y);
+            }
+            
+            // 垂直線
+            const maxPoints = Math.min(bankrollHistory.length, 15);
+            const step = Math.max(1, Math.floor(bankrollHistory.length / maxPoints));
+            
+            for (let i = 0; i < bankrollHistory.length; i += step) {
+                const x = padding + (chartWidth * i / (bankrollHistory.length - 1));
+                ctx.strokeStyle = '#4b5563';
+                ctx.lineWidth = 0.5;
+                ctx.beginPath();
+                ctx.moveTo(x, padding);
+                ctx.lineTo(x, padding + chartHeight);
+                ctx.stroke();
+                
+                // X軸ラベル
+                if (i % Math.max(1, Math.floor(bankrollHistory.length / 8)) === 0) {
+                    ctx.fillStyle = '#9ca3af';
+                    ctx.font = '10px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'top';
+                    ctx.fillText(i.toString(), x, padding + chartHeight + 5);
+                }
+            }
+            
+            // データライン - より滑らかな描画
+            if (bankrollHistory.length > 1) {
+                const isProfit = bankroll >= initialBankroll;
+                ctx.strokeStyle = isProfit ? '#10b981' : '#ef4444';
+                ctx.lineWidth = 2.5;
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+                ctx.beginPath();
+                
+                for (let i = 0; i < bankrollHistory.length; i++) {
+                    const x = padding + (chartWidth * i / (bankrollHistory.length - 1));
+                    const normalizedAmount = (bankrollHistory[i].amount - adjustedMin) / adjustedRange;
+                    const y = padding + chartHeight - (normalizedAmount * chartHeight);
+                    
+                    if (i === 0) {
+                        ctx.moveTo(x, y);
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
+                }
+                ctx.stroke();
+                
+                // データポイント - より目立つように
+                ctx.fillStyle = isProfit ? '#10b981' : '#ef4444';
+                for (let i = 0; i < bankrollHistory.length; i++) {
+                    const x = padding + (chartWidth * i / (bankrollHistory.length - 1));
+                    const normalizedAmount = (bankrollHistory[i].amount - adjustedMin) / adjustedRange;
+                    const y = padding + chartHeight - (normalizedAmount * chartHeight);
+                    
+                    ctx.beginPath();
+                    ctx.arc(x, y, 3, 0, 2 * Math.PI);
+                    ctx.fill();
+                    
+                    // 最新のポイントを強調
+                    if (i === bankrollHistory.length - 1) {
+                        ctx.strokeStyle = isProfit ? '#10b981' : '#ef4444';
+                        ctx.lineWidth = 2;
+                        ctx.beginPath();
+                        ctx.arc(x, y, 6, 0, 2 * Math.PI);
+                        ctx.stroke();
+                    }
+                }
+                
+                // 基準線（初期資金）
+                if (adjustedMin <= initialBankroll && adjustedMax >= initialBankroll) {
+                    const baselineY = padding + chartHeight - ((initialBankroll - adjustedMin) / adjustedRange * chartHeight);
+                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+                    ctx.lineWidth = 1;
+                    ctx.setLineDash([5, 5]);
+                    ctx.beginPath();
+                    ctx.moveTo(padding, baselineY);
+                    ctx.lineTo(padding + chartWidth, baselineY);
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+                    
+                    // 基準線ラベル
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+                    ctx.font = '10px sans-serif';
+                    ctx.textAlign = 'left';
+                    ctx.textBaseline = 'bottom';
+                    ctx.fillText('初期資金', padding + 5, baselineY - 2);
+                }
+            }
+            
+            // 現在値表示
+            if (bankrollHistory.length > 0) {
+                const currentAmount = bankrollHistory[bankrollHistory.length - 1].amount;
+                const isProfit = currentAmount >= initialBankroll;
+                const profitLoss = currentAmount - initialBankroll;
+                const profitPercent = ((currentAmount / initialBankroll - 1) * 100).toFixed(1);
+                
+                ctx.fillStyle = isProfit ? '#10b981' : '#ef4444';
+                ctx.font = 'bold 12px sans-serif';
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'top';
+                ctx.fillText(
+                    `¥${currentAmount.toLocaleString()} (${profitLoss >= 0 ? '+' : ''}${profitLoss.toLocaleString()}, ${profitPercent}%)`,
+                    padding + chartWidth - 5,
+                    padding + 5
+                );
+            }
+        }
+
         function updateHistoryDisplay() {
             const container = document.getElementById('historyContainer');
             const emptyMsg = document.getElementById('historyEmpty');
@@ -934,10 +1336,17 @@
             const diff = Math.abs(playerScore - bankerScore);
             const diffType = diff % 2 === 0 ? t('even') : t('odd');
             
+            // 前回のベット提案があった場合、自動的に勝敗を判定
+            if (activeBet && resultWinner !== t('tie')) {
+                const betResult = (activeBet === resultWinner) ? 'win' : 'lose';
+                applyBetResultAuto(betResult);
+                activeBet = null; // ベット処理後にクリア
+            }
+            
             // Show result
             document.getElementById('winnerValue').textContent = resultWinner;
             document.getElementById('winnerValue').className = getWinnerClass(resultWinner);
-            document.getElementById('scoreDiffValue').textContent = `${diff} (${diffType})`;
+            document.getElementById('scoreDiffValue').textContent = `${diff}`;
             document.getElementById('resultDisplay').classList.remove('hidden');
 
             const roundResult = {
@@ -1003,6 +1412,14 @@
                 }
             }
             
+            // パターンが確認されている場合、次のベット提案を設定
+            if (patternVerified && !suspendBetting) {
+                const suggestion = getSuggestedBet();
+                if (suggestion) {
+                    activeBet = suggestion;
+                }
+            }
+            
             updateDisplay();
         }
 
@@ -1039,13 +1456,8 @@
             return { isVerified: false };
         }
 
-        // Apply bet result
-        function applyBetResult() {
-            const result = document.getElementById('betResult').value;
-            if (result === 'none') return;
-
-            if (result === 'tie') return;
-
+        // Apply bet result automatically
+        function applyBetResultAuto(result) {
             if (result === 'win') {
                 bankroll += betAmount;
                 betAmount = initialBetAmount;
@@ -1062,7 +1474,16 @@
                 round: bankrollHistory.length, 
                 amount: bankroll 
             });
+        }
 
+        // Apply bet result (manual - keep for compatibility)
+        function applyBetResult() {
+            const result = document.getElementById('betResult').value;
+            if (result === 'none') return;
+
+            if (result === 'tie') return;
+
+            applyBetResultAuto(result);
             updateDisplay();
         }
 
@@ -1082,6 +1503,7 @@
             suspendBetting = false;
             consecutiveTies = 0;
             lastNonTieRound = null;
+            activeBet = null; // アクティブなベットをリセット
             
             document.getElementById('resultDisplay').classList.add('hidden');
             document.getElementById('playerScore').value = '0';
@@ -1152,6 +1574,11 @@
             }
         });
 
+        // Chart resize handler
+        window.addEventListener('resize', () => {
+            setTimeout(updateChart, 100);
+        });
+
         // Initialize app
         updateUIText();
         updateDisplay();
@@ -1162,4 +1589,8 @@
         }
     </script>
 </body>
-</html>
+</html>">
+                            <span id="winnerLabel">勝者:</span>
+                            <span id="winnerValue"></span>
+                        </div>
+                        <div class="result-row
