@@ -14,7 +14,6 @@
     <meta name="apple-mobile-web-app-title" content="バカラアドバイザー">
     
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -1144,8 +1143,7 @@
                 gap: 12px;
             }
         }
-    
-</style>
+    </style>
 </head>
 <body>
     <!-- Pause Overlay -->
@@ -1169,40 +1167,177 @@
         <div class="settings-content">
             <h3 class="settings-title">⚙️ 設定</h3>
             
-            <!-- Currency Section -->
+            <!-- Currency Section - Enhanced -->
             <div class="settings-section">
                 <div class="section-title">
                     <span>💱</span>
-                    <span id="currencySectionTitle">通貨設定</span>
+                    <span>通貨設定</span>
                 </div>
-                <div class="input-group">
-                    <label class="input-label" id="currencyLabel">通貨</label>
-                    <select id="currencySelect" class="select-field">
-                        <option value="JPY">🇯🇵 日本円</option>
-                        <option value="USD">🇺🇸 US Dollar</option>
-                        <option value="EUR">🇪🇺 Euro</option>
-                        <option value="KRW">🇰🇷 韓国ウォン</option>
-                        <option value="CNY">🇨🇳 人民元</option>
-                    </select>
+                
+                <div class="currency-options">
+                    <label class="currency-option">
+                        <input type="radio" name="currency" value="JPY" checked>
+                        <span class="currency-checkmark"></span>
+                        <div class="currency-info">
+                            <div class="currency-name">
+                                <span class="currency-flag">🇯🇵</span>
+                                <span>日本円 (JPY)</span>
+                            </div>
+                            <div class="currency-details">
+                                初期資金: ¥100,000 | 初期ベット: ¥500
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="currency-option">
+                        <input type="radio" name="currency" value="USD">
+                        <span class="currency-checkmark"></span>
+                        <div class="currency-info">
+                            <div class="currency-name">
+                                <span class="currency-flag">🇺🇸</span>
+                                <span>米ドル (USD)</span>
+                            </div>
+                            <div class="currency-details">
+                                初期資金: $1,000 | 初期ベット: $5
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="currency-option">
+                        <input type="radio" name="currency" value="EUR">
+                        <span class="currency-checkmark"></span>
+                        <div class="currency-info">
+                            <div class="currency-name">
+                                <span class="currency-flag">🇪🇺</span>
+                                <span>ユーロ (EUR)</span>
+                            </div>
+                            <div class="currency-details">
+                                初期資金: €900 | 初期ベット: €5
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="currency-option">
+                        <input type="radio" name="currency" value="KRW">
+                        <span class="currency-checkmark"></span>
+                        <div class="currency-info">
+                            <div class="currency-name">
+                                <span class="currency-flag">🇰🇷</span>
+                                <span>韓国ウォン (KRW)</span>
+                            </div>
+                            <div class="currency-details">
+                                初期資金: ₩1,200,000 | 初期ベット: ₩6,000
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="currency-option">
+                        <input type="radio" name="currency" value="CNY">
+                        <span class="currency-checkmark"></span>
+                        <div class="currency-info">
+                            <div class="currency-name">
+                                <span class="currency-flag">🇨🇳</span>
+                                <span>中国人民元 (CNY)</span>
+                            </div>
+                            <div class="currency-details">
+                                初期資金: ¥7,000 | 初期ベット: ¥35
+                            </div>
+                        </div>
+                    </label>
                 </div>
             </div>
             
-            <!-- Language Section -->
+            <!-- Language Section - Enhanced -->
             <div class="settings-section">
                 <div class="section-title">
                     <span>🌍</span>
-                    <span id="languageSectionTitle">言語設定</span>
+                    <span>言語設定</span>
                 </div>
-                <div class="input-group">
-                    <label class="input-label" id="languageLabel">言語</label>
-                    <select id="languageSelect" class="select-field">
-                        <option value="ja">日本語</option>
-                        <option value="en">English</option>
-                        <option value="es">Español</option>
-                        <option value="zh">中文</option>
-                        <option value="ko">한국어</option>
-                        <option value="fr">Français</option>
-                    </select>
+                
+                <div class="language-options">
+                    <label class="language-option">
+                        <input type="radio" name="language" value="ja" checked>
+                        <span class="language-checkmark"></span>
+                        <div class="language-info">
+                            <div class="language-name">
+                                <span class="language-flag">🇯🇵</span>
+                                <span>日本語</span>
+                            </div>
+                            <div class="language-details">
+                                日本で使用される言語
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="language-option">
+                        <input type="radio" name="language" value="en">
+                        <span class="language-checkmark"></span>
+                        <div class="language-info">
+                            <div class="language-name">
+                                <span class="language-flag">🇺🇸</span>
+                                <span>English</span>
+                            </div>
+                            <div class="language-details">
+                                国際的に広く使用される言語
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="language-option">
+                        <input type="radio" name="language" value="es">
+                        <span class="language-checkmark"></span>
+                        <div class="language-info">
+                            <div class="language-name">
+                                <span class="language-flag">🇪🇸</span>
+                                <span>Español</span>
+                            </div>
+                            <div class="language-details">
+                                スペインや中南米で使用される言語
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="language-option">
+                        <input type="radio" name="language" value="zh">
+                        <span class="language-checkmark"></span>
+                        <div class="language-info">
+                            <div class="language-name">
+                                <span class="language-flag">🇨🇳</span>
+                                <span>中文</span>
+                            </div>
+                            <div class="language-details">
+                                中国で使用される言語
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="language-option">
+                        <input type="radio" name="language" value="ko">
+                        <span class="language-checkmark"></span>
+                        <div class="language-info">
+                            <div class="language-name">
+                                <span class="language-flag">🇰🇷</span>
+                                <span>한국어</span>
+                            </div>
+                            <div class="language-details">
+                                韓国で使用される言語
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="language-option">
+                        <input type="radio" name="language" value="fr">
+                        <span class="language-checkmark"></span>
+                        <div class="language-info">
+                            <div class="language-name">
+                                <span class="language-flag">🇫🇷</span>
+                                <span>Français</span>
+                            </div>
+                            <div class="language-details">
+                                フランスやカナダなどで使用される言語
+                            </div>
+                        </div>
+                    </label>
                 </div>
             </div>
             
@@ -1210,45 +1345,57 @@
             <div class="settings-section">
                 <div class="section-title">
                     <span>💰</span>
-                    <span id="fundsSectionTitle">資金設定</span>
+                    <span>資金設定</span>
                 </div>
+                
                 <div class="input-group">
-                    <label class="input-label" id="initialFundsLabel">初期資金</label>
-                    <input type="number" id="initialFundsInput" class="input-field" value="100000" min="1000" step="1000">
+                    <label for="initialFunds">初期資金</label>
+                    <input type="number" id="initialFunds" min="0" step="100" value="100000" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="initialBet">初期ベット額</label>
+                    <input type="number" id="initialBet" min="0" step="10" value="500" class="input-field">
                 </div>
             </div>
             
             <!-- Strategy Section -->
             <div class="settings-section">
                 <div class="section-title">
-                    <span>🎯</span>
-                    <span id="strategySectionTitle">戦略設定</span>
+                    <span>📊</span>
+                    <span>戦略設定</span>
                 </div>
+                
                 <div class="input-group">
-                    <label class="input-label" id="verificationCountLabel">パターン検証回数</label>
-                    <input type="number" id="verificationCountInput" class="input-field" value="4" min="1" max="10">
+                    <label for="patternValidation">パターン検証回数</label>
+                    <input type="number" id="patternValidation" min="1" max="10" value="4" class="input-field">
                 </div>
             </div>
             
             <!-- Risk Management Section -->
             <div class="settings-section">
                 <div class="section-title">
-                    <span>🛡️</span>
-                    <span id="riskSectionTitle">リスク管理</span>
+                    <span>⚠️</span>
+                    <span>リスク管理</span>
                 </div>
-                <div class="input-group">
-                    <label class="input-label" id="lossLimitPercentLabel">損失限度 (%)</label>
-                    <div class="enhanced-slider-container">
-                        <input type="range" id="lossLimitSlider" class="enhanced-slider" min="0" max="100" value="20" step="1">
-                        <div class="slider-value-popup" id="sliderValuePopup">20%</div>
+                
+                <div class="slider-container">
+                    <div class="slider-header">
+                        <span class="slider-label">損失限度 (%)</span>
+                        <span id="riskPercentageValue" class="slider-value">20%</span>
                     </div>
+                    <input type="range" min="0" max="100" value="20" class="enhanced-slider" id="riskPercentage">
+                    <div class="slider-value-popup" id="sliderValuePopup">20%</div>
+                    
                     <div class="slider-labels">
                         <span>0% (無制限)</span>
                         <span id="currentLossLimitPercent">20%</span>
                         <span>100%</span>
                     </div>
-                    <div class="current-limit-display" id="currentLimitDisplay">
-                        損失限度: ¥20,000 (20%)
+                    
+                    <div class="risk-limit-display">
+                        <div>損失限度：</div>
+                        <div id="riskLimitAmount" class="risk-limit-amount">¥20,000</div>
                     </div>
                 </div>
             </div>
@@ -1256,11 +1403,11 @@
             <div class="settings-buttons-grid">
                 <button id="applySettings" class="settings-btn btn-apply">
                     <span>✅</span>
-                    <span id="applyText">適用</span>
+                    <span>適用</span>
                 </button>
                 <button id="cancelSettings" class="settings-btn btn-cancel">
                     <span>❌</span>
-                    <span id="cancelText">キャンセル</span>
+                    <span>キャンセル</span>
                 </button>
             </div>
         </div>
@@ -1330,7 +1477,7 @@
                                 <button class="score-btn" data-banker="2">2</button>
                                 <button class="score-btn" data-banker="3">3</button>
                                 <button class="score-btn" data-banker="4">4</button>
-                                <button class="score-btn" data-banker="5">5</button>
+                                <button class="score-btn" data-banker="极">5</button>
                                 <button class="score-btn" data-banker="6">6</button>
                                 <button class="score-btn" data-banker="7">7</button>
                                 <button class="score-btn" data-banker="8">8</button>
@@ -1374,14 +1521,11 @@
                         </div>
                     </div>
                     
-                    <div class="loss-limit-control">
+                    <div class="risk-controls">
                         <div class="risk-input">
                             <label id="lossLimitLabel">損失限度:</label>
                             <span id="lossLimitDisplay">¥20,000 (20%)</span>
                         </div>
-                    </div>
-                    
-                    <div class="risk-controls">
                         <div class="risk-input">
                             <label id="currentLossLabel">現在の損失:</label>
                             <span id="currentLoss" style="color: #10b981; font-weight: bold;">¥0</span>
@@ -1629,7 +1773,7 @@
                 nextBetSuggestion: "Sugerencia de Próxima Apuesta",
                 riskManagement: "Gestión de Riesgo",
                 fundsRatio: "Ratio de Fondos",
-                riskLevel: "Nivel de Riesgo",
+                riskLevel: "Niveau de Riesgo",
                 lossLimit: "Límite de Pérdida:",
                 currentLoss: "Pérdida Actual:",
                 pause: "Pausar",
@@ -2045,18 +2189,11 @@
             document.getElementById('chartPlaceholder').textContent = t('chartPlaceholder');
             
             // Settings modal text
-            document.getElementById('currencySectionTitle').textContent = t('currencySection');
-            document.getElementById('currencyLabel').textContent = t('currency');
-            document.getElementById('languageSectionTitle').textContent = t('languageSection');
-            document.getElementById('languageLabel').textContent = t('language');
-            document.getElementById('fundsSectionTitle').textContent = t('fundsSection');
-            document.getElementById('initialFundsLabel').textContent = t('initialFunds');
-            document.getElementById('strategySectionTitle').textContent = t('strategySection');
-            document.getElementById('verificationCountLabel').textContent = t('verificationCount');
-            document.getElementById('riskSectionTitle').textContent = t('riskSection');
-            document.getElementById('lossLimitPercentLabel').textContent = t('lossLimitPercent');
-            document.getElementById('applyText').textContent = t('apply');
-            document.getElementById('cancelText').textContent = t('cancel');
+            document.querySelector('.settings-section:nth-child(3) .section-title span:last-child').textContent = t('currencySection');
+            document.querySelector('.settings-section:nth-child(4) .section-title span:last-child').textContent = t('languageSection');
+            document.querySelector('.settings-section:nth-child(5) .section-title span:last-child').textContent = t('fundsSection');
+            document.querySelector('.settings-section:nth-child(6) .section-title span:last-child').textContent = t('strategySection');
+            document.querySelector('.settings-section:nth-child(7) .section-title span:last-child').textContent = t('riskSection');
             
             // 通貨表示も更新（言語変更時に通貨名も変更されるため）
             const currency = currencies[currentCurrency];
@@ -2147,12 +2284,12 @@
 
         // Update loss limit display in settings
         function updateLossLimitDisplay() {
-            const percentage = document.getElementById('lossLimitSlider').value;
+            const percentage = document.getElementById('riskPercentage').value;
             const amount = initialBankroll * (percentage / 100);
             const formattedAmount = formatCurrency(amount);
             
             document.getElementById('currentLossLimitPercent').textContent = percentage + '%';
-            document.getElementById('currentLimitDisplay').textContent = `${t('lossLimit')} ${formattedAmount} (${percentage}%)`;
+            document.getElementById('riskLimitAmount').textContent = formattedAmount;
             document.getElementById('sliderValuePopup').textContent = percentage + '%';
         }
 
@@ -2207,11 +2344,7 @@
             }
 
             if (!patternVerified) {
-                if (verificationCount === 0) {
-                    return `${t('initialVerification')}`;
-                } else {
-                    return `${t('patternVerifying')} (${verificationCount}/${requiredVerifications})`;
-                }
+                return `${t('patternVerifying')} (${verificationCount}/${requiredVerifications})`;
             }
 
             const suggestedBet = getSuggestedBet();
@@ -2388,7 +2521,7 @@
                 ctx.fillStyle = isProfit ? '#10b981' : '#ef4444';
                 for (let i = 0; i < bankrollHistory.length; i++) {
                     const x = padding + (chartWidth * i / (bankrollHistory.length - 1));
-                    const normalizedAmount = (bankrollHistory[i].amount - adjustedMin) / adjustedRange;
+                    const normalizedAmount = (bankrollHistory[i].amount - adjustedMin) / adjustedRange);
                     const y = padding + chartHeight - (normalizedAmount * chartHeight);
                     
                     ctx.beginPath();
@@ -2553,7 +2686,6 @@
             } else {
                 history.push(roundResult);
                 
-                // パターンが未確認の場合、または勝利後のリセット後の場合に検証
                 if (!patternVerified) {
                     const verification = verifyPattern(history);
                     
@@ -2579,6 +2711,7 @@
             
             updateDisplay();
         }
+
         // Handle tie verification
         function handleTieVerification(roundResult) {
             history.push(roundResult);
@@ -2619,11 +2752,6 @@
                 betAmount = initialBetAmount;
                 consecutiveLosses = 0;
                 martingaleActive = false;
-                
-                // 勝利時にパターン検証をリセット
-                patternVerified = false;
-                verificationCount = 0;
-                
             } else if (result === 'lose') {
                 bankroll -= betAmount;
                 consecutiveLosses += 1;
@@ -2738,7 +2866,7 @@
                     currencyText.textContent = currency.name[currentLanguage];
                 }
             }
-            document.getElementById('initialFundsInput').value = initialBankroll;
+            document.getElementById('initialFunds').value = initialBankroll;
             
             updateDisplay();
         }
@@ -2773,7 +2901,7 @@
         document.getElementById('resumeBtn').addEventListener('click', resumeSession);
         
         // Enhanced slider with real-time popup
-        document.getElementById('lossLimitSlider').addEventListener('input', (e) => {
+        document.getElementById('riskPercentage').addEventListener('input', (e) => {
             const percentage = parseInt(e.target.value);
             lossLimitPercentage = percentage;
             lossLimitAmount = initialBankroll * (percentage / 100);
@@ -2783,11 +2911,24 @@
         
         // Settings modal functionality
         document.getElementById('settingsBtn').addEventListener('click', () => {
-            document.getElementById('currencySelect').value = currentCurrency;
-            document.getElementById('languageSelect').value = currentLanguage;
-            document.getElementById('initialFundsInput').value = initialBankroll;
-            document.getElementById('verificationCountInput').value = requiredVerifications;
-            document.getElementById('lossLimitSlider').value = lossLimitPercentage;
+            // Set current values in settings modal
+            document.querySelector(`input[name="currency"][value="${currentCurrency}"]`).checked = true;
+            document.querySelector(`input[name="language"][value="${currentLanguage}"]`).checked = true;
+            document.getElementById('initialFunds').value = initialBankroll;
+            document.getElementById('initialBet').value = initialBetAmount;
+            document.getElementById('patternValidation').value = requiredVerifications;
+            document.getElementById('riskPercentage').value = lossLimitPercentage;
+            
+            // Update selected classes
+            document.querySelectorAll('.currency-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelector(`input[name="currency"][value="${currentCurrency}"]`).parentElement.classList.add('selected');
+            document.querySelector(`input[name="language"][value="${currentLanguage}"]`).parentElement.classList.add('selected');
+            
             updateLossLimitDisplay();
             document.getElementById('settingsModal').classList.remove('hidden');
             
@@ -2808,11 +2949,12 @@
         });
 
         document.getElementById('applySettings').addEventListener('click', () => {
-            const newCurrency = document.getElementById('currencySelect').value;
-            const newLanguage = document.getElementById('languageSelect').value;
-            const newInitialBankroll = parseInt(document.getElementById('initialFundsInput').value);
-            const newRequiredVerifications = parseInt(document.getElementById('verificationCountInput').value);
-            const newLossLimitPercentage = parseInt(document.getElementById('lossLimitSlider').value);
+            const newCurrency = document.querySelector('input[name="currency"]:checked').value;
+            const newLanguage = document.querySelector('input[name="language"]:checked').value;
+            const newInitialBankroll = parseInt(document.getElementById('initialFunds').value);
+            const newInitialBet = parseInt(document.getElementById('initialBet').value);
+            const newRequiredVerifications = parseInt(document.getElementById('patternValidation').value);
+            const newLossLimitPercentage = parseInt(document.getElementById('riskPercentage').value);
             
             // Apply currency change
             if (newCurrency !== currentCurrency) {
@@ -2832,6 +2974,8 @@
             }
             
             // Update other settings
+            initialBetAmount = newInitialBet;
+            betAmount = newInitialBet;
             requiredVerifications = newRequiredVerifications;
             lossLimitPercentage = newLossLimitPercentage;
             lossLimitAmount = initialBankroll * (lossLimitPercentage / 100);
@@ -2857,8 +3001,121 @@
         
         // Service Worker registration for PWA
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('data:text/javascript;base64,Y29uc3QgQ0FDSEVfTkFNRSA9ICdiYWNjYXJhdC1hZHZpc29yLXYxJzsKY29uc3QgdXJsc1RvQ2FjaGUgPSBbCiAgJy8nLAogICcvaW5kZXguaHRtbCcKXTsKCnNlbGYuYWRkRXZlbnRMaXN0ZW5lcignaW5zdGFsbCcsIGV2ZW50ID0+IHsKICBldmVudC53YWl0VW50aWwoCiAgICBjYWNoZXMub3BlbihDQUNIRV9OQU1FKQogICAgICAudGhlbihjYWNoZSA9PiBjYWNoZS5hZGRBbGwodXJsc1RvQ2FjaGUpKQogICk7Cn0pOwoKc2VsZi5hZGRFdmVudExpc3RlbmVyKCdmZXRjaCcsIGV2ZW50ID0+IHsKICBldmVudC5yZXNwb25kV2l0aCgKICAgIGNhY2hlcy5tYXRjaChldmVudC5yZXF1ZXN0KQogICAgICAudGhlbihyZXNwb25zZSA9PiB7CiAgICAgICAgcmV0dXJuIHJlc3BvbnNlIHx8IGZldGNoKGV2ZW50LnJlcXVlc3QpOwogICAgICB9KQogICk7Cn0pOw==');
+            navigator.serviceWorker.register('data:text/javascript;base64,Y29uc3QgQ0FDSEVfTkFNRSA9ICdiYWNjYXJhdC1hZHZpc29yLXYxJzsKY29uc3QgdXJsc1RvQ2FjaGUgPSBbCiAgJy8nLAogICcvaW5kZXguaHRtbCcKXTsKCnNlbGYuYWRkRXZlbnRMaXN0ZW5lcignaW5zdGFsbCcsIGV2ZW50ID0+IHsKICBldmVudC53YWl0VW50aWwoCiAgICBjYWNoZXMub3BlbihDQUNIRV9OQU1FKQogICAgICAudGhlbihjYWNoZSA9PiBjYWNoZS5hZGRBbGwodXJsc1RvQ2FjaGUpKQogICk7Cn0pOwoKc2VsZi5hZGRFdmVudExpXN0ZW5lcignZmV0Y2gnLCBldmVudCA9PiB7CiAgZXZlbnQucmVzcG9uZFdpdGgoCiAgICBjYWNoZXMubWF0Y2goZXZlbnQucmVxdWVzdCkKICAgICAgLnRoZW4ocmVzcG9uc2UgPT4gewogICAgICAgIHJldHVybiByZXNwb25zZSB8fCBmZXRjaChldmVudC5yZXF1ZXN0KTsKICAgICAgfSkKICApOwp9KTs=');
         }
+
+        // 通貨選択のインタラクション
+        document.querySelectorAll('.currency-option input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.querySelectorAll('.currency-option').forEach(option => {
+                    option.classList.remove('selected');
+                });
+                
+                if (this.checked) {
+                    this.parentElement.classList.add('selected');
+                    updateCurrencySettings(this.value);
+                }
+            });
+        });
+        
+        // 言語選択のインタラクション
+        document.querySelectorAll('.language-option input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.classList.remove('selected');
+                });
+                
+                if (this.checked) {
+                    this.parentElement.classList.add('selected');
+                }
+            });
+        });
+        
+        // リスク管理スライダーの処理
+        const riskSlider = document.getElementById('riskPercentage');
+        const riskPercentageValue = document.getElementById('riskPercentageValue');
+        const riskLimitAmount = document.getElementById('riskLimitAmount');
+        const initialFundsInput = document.getElementById('initialFunds');
+        const sliderValuePopup = document.getElementById('sliderValuePopup');
+        
+        riskSlider.addEventListener('input', updateRiskLimit);
+        initialFundsInput.addEventListener('input', updateRiskLimit);
+        
+        function updateRiskLimit() {
+            const riskPercentage = riskSlider.value;
+            const initialFunds = parseInt(initialFundsInput.value);
+            const riskLimit = Math.floor(initialFunds * (riskPercentage / 100));
+            
+            riskPercentageValue.textContent = `${riskPercentage}%`;
+            sliderValuePopup.textContent = `${riskPercentage}%`;
+            
+            // 現在選択されている通貨に基づいて表示を更新
+            const selectedCurrency = document.querySelector('input[name="currency"]:checked').value;
+            formatRiskLimit(riskLimit, selectedCurrency);
+        }
+        
+        function formatRiskLimit(amount, currency) {
+            let symbol = '';
+            switch(currency) {
+                case 'JPY':
+                    symbol = '¥';
+                    break;
+                case 'USD':
+                    symbol = '$';
+                    break;
+                case 'EUR':
+                    symbol = '€';
+                    break;
+                case 'KRW':
+                    symbol = '₩';
+                    break;
+                case 'CNY':
+                    symbol = '¥';
+                    break;
+                default:
+                    symbol = '¥';
+            }
+            
+            // 数値をフォーマット（3桁ごとにカンマ）
+            const formattedAmount = symbol + amount.toLocaleString();
+            riskLimitAmount.textContent = formattedAmount;
+        }
+        
+        function updateCurrencySettings(currency) {
+            // 通貨に応じて初期資金とベット額を更新
+            switch(currency) {
+                case 'JPY':
+                    initialFundsInput.value = 100000;
+                    document.getElementById('initialBet').value = 500;
+                    break;
+                case 'USD':
+                    initialFundsInput.value = 1000;
+                    document.getElementById('initialBet').value = 5;
+                    break;
+                case 'EUR':
+                    initialFundsInput.value = 900;
+                    document.getElementById('initialBet').value = 5;
+                    break;
+                case 'KRW':
+                    initialFundsInput.value = 1200000;
+                    document.getElementById('initialBet').value = 6000;
+                    break;
+                case 'CNY':
+                    initialFundsInput.value = 7000;
+                    document.getElementById('initialBet').value = 35;
+                    break;
+            }
+            
+            // リスク限度額の表示を更新
+            updateRiskLimit();
+        }
+        
+        // 初期選択状態を設定
+        document.querySelector('.currency-option input[type="radio"]:checked').parentElement.classList.add('selected');
+        document.querySelector('.language-option input[type="radio"]:checked').parentElement.classList.add('selected');
+        
+        // 初期リスク限度額を計算
+        updateRiskLimit();
     </script>
 </body>
 </html>
